@@ -8,3 +8,10 @@ and boom! you get some pwned users.
 
 do note that your id wordlist should be only one id per line!!! 
 Happy hacking!!
+
+
+Also if youre wondering how to find these IDs to spray on, here you go:
+1. `net users /domain` (do some cleaning)
+2.  `Get-WmiObject -Class win32_useraccount | select Name` 
+
+ideally these should not be flagged but if they are your problem !!! XD
